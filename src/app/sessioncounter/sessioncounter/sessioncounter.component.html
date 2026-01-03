@@ -1,0 +1,15 @@
+<div class="elements">
+  <section class="activeSessions" *ngIf="estadoInicial > 0; else sinSesiones">
+    <h2>Sesiones activas: {{ estadoInicial }}</h2>
+  </section>
+
+  <ng-template class="noSessions" #sinSesiones>
+    <h3>Sin sesiones activas</h3>
+  </ng-template>
+</div>
+
+<div class="buttons">
+  <button (click)="iniciarSesion(1)">Iniciar sesión</button>
+  <button (click)="cerrarSesion(1)">Cerrar sesión</button>
+  <button (click)="reset()">Resetear</button>
+</div>

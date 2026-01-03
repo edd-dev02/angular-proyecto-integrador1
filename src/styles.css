@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+Nota: Recuerda añadir el normalize.css
+*/
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+body {
+    font-size: 1.6rem;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+p a{
+    display: inline; /*Para que no se produzca un salto de línea*/
+}
+
+img, video, iframe, picture, figure {
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    margin: 0 0 2rem  0 ;
+}
+
+form, input, select, textarea, button, label{
+    font-family: inherit;
+    font-size: inherit;
+    display: block;
+    color: inherit;
+
+}
