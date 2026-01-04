@@ -1,0 +1,12 @@
+
+<p>Total de usuarios: {{ totalUsers }}</p>
+<div class="porcentajes">
+  <p *ngIf="usuariosActivos > 50; else bajoEngagement">Buen engagement de usuarios: {{ usuariosActivos }}%</p>
+
+  <ng-template #bajoEngagement>
+    <p>Bajo engagement de usuarios: {{ usuariosActivos }}%</p>
+  </ng-template>
+</div>
+
+<button (click)="activarUsuario()">+1 Usuario activo</button>
+<button (click)="desactivarUsuario()">-1 Usuario activo</button>

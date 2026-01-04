@@ -5,6 +5,7 @@ import { TaskListModule } from './tasklist/tasklist.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SessionCounterModule } from './sessioncounter/sessioncounter.module';
+import { StatsModule } from './stats/stats.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SessionCounterModule } from './sessioncounter/sessioncounter.module';
     BrowserModule,
     AppRoutingModule,
     SessionCounterModule,
-    TaskListModule
+    TaskListModule,
+    StatsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
