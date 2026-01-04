@@ -18,6 +18,16 @@ export class TasklistComponent {
     "Comer de forma balanceada",
     "Lavar platos o recoger la cocina",
     "Preparar lo necesario para el día siguiente (ropa, mochila, pendientes)",
-  ]
+  ];
+
+  public tareaEliminada?: string;
+
+  eliminarTarea(): void {
+
+    console.log("Iniciando método...");
+
+    this.tareaEliminada = this.tareas.shift();
+
+  }
 
 }

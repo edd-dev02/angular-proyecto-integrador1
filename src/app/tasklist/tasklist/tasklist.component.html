@@ -1,1 +1,16 @@
-<p>tasklist works!</p>
+
+<div *ngIf="tareaEliminada; else sinCompletar">
+  <p>Última tarea completada: {{ tareaEliminada }} </p>
+</div>
+
+<ng-template #sinCompletar>
+
+  <p>No se ha completado ninguna tarea</p>
+
+</ng-template>
+
+<button *ngIf="tareas.length > 0" (click)="eliminarTarea()">Completar siguiente tarea</button>
+
+<ul>
+  <li *ngFor="let tarea of tareas">{{tarea}}</li>
+</ul>
