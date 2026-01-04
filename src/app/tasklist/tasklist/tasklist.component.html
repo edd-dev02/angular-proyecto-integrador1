@@ -1,3 +1,20 @@
+<section>
+  <p>Total de tareas: {{ obtenerTotalTareas }}</p>
+
+  <small *ngIf="obtenerTotalTareas > 5; else pocasTareas">Muchas tareas</small>
+
+  <ng-template #pocasTareas>
+    <small *ngIf="obtenerTotalTareas > 0">Pocas tareas</small>
+  </ng-template>
+
+
+</section>
+
+<ul>
+  <li *ngFor="let tarea of tareas">{{tarea}}</li>
+</ul>
+
+<button *ngIf="tareas.length > 0" (click)="eliminarTarea()">Completar siguiente tarea</button>
 
 <div *ngIf="tareaEliminada; else sinCompletar">
   <p>Última tarea completada: {{ tareaEliminada }} </p>
@@ -8,9 +25,3 @@
   <p>No se ha completado ninguna tarea</p>
 
 </ng-template>
-
-<button *ngIf="tareas.length > 0" (click)="eliminarTarea()">Completar siguiente tarea</button>
-
-<ul>
-  <li *ngFor="let tarea of tareas">{{tarea}}</li>
-</ul>

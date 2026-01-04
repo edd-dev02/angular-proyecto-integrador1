@@ -24,9 +24,13 @@ export class TasklistComponent {
 
   eliminarTarea(): void {
 
-    console.log("Iniciando método...");
-
     this.tareaEliminada = this.tareas.shift();
+
+  }
+
+  get obtenerTotalTareas(): number {
+
+    return this.tareas.length;
 
   }
 

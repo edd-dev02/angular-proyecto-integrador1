@@ -1,3 +1,16 @@
+ul {
+  margin: 1.2rem 0;
+}
+
 li {
   list-style: circle;
+}
+
+section > p {
+  font-size: 1.8rem;
+}
+
+section small {
+  display: block;
+  margin: 1rem 0;
 }
